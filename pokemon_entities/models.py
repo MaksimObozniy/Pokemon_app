@@ -11,12 +11,14 @@ class Pokemon(models.Model):
     title_en = models.CharField(
         max_length=20, 
         blank=True,
+        null=True,
         verbose_name='Название на английском'
         )
     
     title_jp = models.CharField(
         max_length=20,
         blank=True,
+        null=True,
         verbose_name='Название на японском'
         )
     
@@ -26,6 +28,7 @@ class Pokemon(models.Model):
     
     description = models.TextField(
         blank=True,
+        null=True,
         verbose_name='Описание'
         )
     
@@ -69,22 +72,32 @@ class PokemonEntity(models.Model):
         )
     
     level = models.IntegerField(
+        null=True, 
+        blank=True,
         verbose_name='Уровень'
     )
     
     health = models.IntegerField(
+        null=True, 
+        blank=True,
         verbose_name='Здоровье'
     )
     
     strength = models.IntegerField(
+        null=True, 
+        blank=True,
         verbose_name='Здоровье'
     )
     
     defence = models.IntegerField(
+        null=True, 
+        blank=True,
         verbose_name='Защита'
     )
     
     stamina = models.IntegerField(
+        null=True, 
+        blank=True,
         verbose_name='Выносливость'
     )
     
