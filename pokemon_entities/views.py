@@ -109,7 +109,7 @@ def show_pokemon(request, pokemon_id):
             "img_url": request.build_absolute_uri(next_evolution.photo.url),
         }
 
-    print("Передаёт в шаблон:", pokemon_data)
+
     
     return render(request, 'pokemon.html', context={
         'map': folium_map._repr_html_(),
